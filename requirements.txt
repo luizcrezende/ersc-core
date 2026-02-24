@@ -1,0 +1,2 @@
+# ERSC Core MVP - minimal dependencies
+# (intentionally empty: standard library only)

@@ -1,0 +1,21 @@
+{
+  "incident_id": "INC-2026-0001",
+  "timestamp_utc": "2026-02-24T11:00:00Z",
+  "site": "Plant-A",
+  "area": "Substation-01",
+  "asset": {
+    "type": "MCC",
+    "tag": "MCC-01",
+    "criticality": "HIGH"
+  },
+  "symptoms": [
+    "overcurrent_trip",
+    "thermal_alarm"
+  ],
+  "context": {
+    "production_state": "RUNNING",
+    "safety_state": "NORMAL",
+    "operator_on_duty": true
+  },
+  "requested_action": "RESET_TRIP"
+}
