@@ -1,21 +1,30 @@
 {
-  "incident_id": "INC-2026-0001",
-  "timestamp_utc": "2026-02-24T11:00:00Z",
-  "site": "Plant-A",
-  "area": "Substation-01",
-  "asset": {
-    "type": "MCC",
-    "tag": "MCC-01",
-    "criticality": "HIGH"
+  "incident": {
+    "incidentId": "INC-2026-000123",
+    "title": "Sobrecorrente intermitente no motor MTR-3A",
+    "summary": "Sob carga, corrente oscila e há aquecimento.",
+    "severity": "S1",
+    "category": "ELECTRICAL",
+    "detectedAt": "2026-03-05T03:12:10Z",
+    "source": {
+      "system": "SCADA",
+      "site": "MINA-A",
+      "area": "Britagem",
+      "assetId": "MTR-3A",
+      "signal": "I_RMS",
+      "tag": "MTR3A_CURR_RMS"
+    },
+    "constraints": {
+      "plcAuthority": true,
+      "noPhysicalActuationByAI": true,
+      "requiresHumanApprovalForCritical": true
+    }
   },
-  "symptoms": [
-    "overcurrent_trip",
-    "thermal_alarm"
-  ],
   "context": {
-    "production_state": "RUNNING",
-    "safety_state": "NORMAL",
-    "operator_on_duty": true
-  },
-  "requested_action": "RESET_TRIP"
+    "tenantId": "plant-001",
+    "environment": "dev",
+    "runMode": "SIMULATED",
+    "policyProfile": "industrial-default",
+    "priority": "HIGH"
+  }
 }
